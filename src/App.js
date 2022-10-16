@@ -15,7 +15,7 @@ function App() {
       const encodedCity = encodeURIComponent(city);
       try {
          const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?q=${encodedCity}&appid=773a3d077fc318937d6b724462ed2d81`
+            `https://api.openweathermap.org/data/2.5/weather?q=${encodedCity}&appid=${process.env.REACT_APP_API_KEY}`
          );
 
          if (response.status === 200) {
